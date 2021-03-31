@@ -1,4 +1,4 @@
-import { ExitToApp } from '@material-ui/icons';
+import { ExitToApp, Category } from '@material-ui/icons';
 import { FormEvent, useContext, useEffect } from 'react';
 import CurrencyInput from 'react-currency-input-field';
 import { Link, useHistory } from 'react-router-dom';
@@ -65,6 +65,9 @@ export default function Home() {
             <div className="page-home-content" >
                 <header>
                     <h1>Moolah</h1>
+                    <Link to="/types">
+                        <Category className="button" />
+                    </Link>
                     <Link to="/">
                         <ExitToApp className="button" />
                     </Link>
@@ -93,13 +96,13 @@ export default function Home() {
                                 autoComplete="off"
                                 decimalsLimit={2}
                                 value={value !== 0 ? value : ''}
-                                onChange={(e) => {
+                                onChange={(e: any) => {
                                     setValue( 
                                         e.target.value
                                             .replace("R$ ", "")
                                             .replace(".","")
                                             .replaceAll(",",".") 
-                                            );
+                                            )
                                 }}
                             />
 

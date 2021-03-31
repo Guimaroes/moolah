@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { TypesContext } from "../../contexts/TypesContext";
 
+import './styles.css';
+
 export default function TypeSelect() {
     
     const { types, selectedType, setSelectedTypeId } = useContext(TypesContext);

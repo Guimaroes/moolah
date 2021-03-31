@@ -1,4 +1,4 @@
-.page-home {
+.page-types {
     height: 100%;
     width: 100%;
     
@@ -7,7 +7,7 @@
     justify-content: center;
 }
 
-.page-home-content {
+.page-types-content {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 5.5rem auto 3rem;
@@ -16,7 +16,7 @@
     width: 100%;
 }
 
-header {
+.page-types-content header {
     background: var(--grey);
 
     display: grid;
@@ -26,19 +26,19 @@ header {
     text-align: left;
 }
 
-header h1 {
+.page-types-content header h1 {
     color: var(--green);
     padding-left: 2rem;
 }
 
-header a {
+.page-types-content header a {
     width: 2.4rem;
     height: 2.4rem;
 
     padding-left: calc(50% - 1.2rem);
 }
 
-header .button {
+.page-types-content header .button {
     color: var(--white);
     opacity: 0.5;
     
@@ -48,7 +48,7 @@ header .button {
     transition: 200ms;
 }
 
-header .button:hover {
+.page-types-content header .button:hover {
     opacity: 1;
 }
 
@@ -61,13 +61,13 @@ header .button:hover {
     width: 100%;
 }
 
-main {
+.page-types-content main {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.page-home-content main > div {
+.page-types-content main > div {
     background: var(--grey);
     padding: 5rem;
     border-radius: 0.5rem;
@@ -75,31 +75,18 @@ main {
     max-width: 992px;
 }
 
-main .main-container form {
+.page-types-content .main-container form {
     display: grid;
-    grid-template-columns: auto 20rem 15rem 15rem;
+    grid-template-columns: auto 20rem 15rem;
     gap: 1rem;
     width: 100%;
 }
 
-main .type-label, .type-select {
-    color: var(--grey);
-    font: 500 1.8rem Poppins;
-}
-
-main .type-select {
-    width: 20rem;
-}
-
-main .currency-input {
+.page-types-content main .add-button {
     width: 15rem;
 }
 
-main .add-button {
-    width: 15rem;
-}
-
-main input {
+.page-types-content main input {
     padding: 1rem;
 
     border: 0 none;
@@ -107,12 +94,12 @@ main input {
     border-left: 5px solid transparent;
 }
 
-main input:focus {
+.page-types-content main input:focus {
     outline: none;
     border-left: 5px solid var(--green);
 }
 
-main select {
+.page-types-content main select {
     padding: 1rem;
 
     border: 0 none;
@@ -122,12 +109,12 @@ main select {
     cursor: pointer;
 }
 
-main select:focus {
+.page-types-content main select:focus {
     outline: none;
     border-left: 5px solid var(--green);
 }
 
-main button {
+.page-types-content main button {
     padding: 1rem;
 
     border: 0 none;
@@ -141,16 +128,15 @@ main button {
     cursor: pointer;
 }
 
-main button:hover {
+.page-types-content main button:hover {
     filter: brightness(0.9);
 }
 
-main button:focus {
+.page-types-content main button:focus {
     outline: none;
 }
 
-
-.page-home-content footer {
+.page-types-content footer {
     background: var(--grey);
     
     display: flex;
