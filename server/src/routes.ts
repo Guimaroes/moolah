@@ -15,6 +15,8 @@ routes.post('/users', usersController.create);
 
 routes.get('/types', typesController.index);
 routes.post('/types', typesController.create);
+routes.delete('/types', typesController.delete);
+routes.put('/types', typesController.update);
 
 routes.get('/finances', financesController.index);
 routes.post('/finances', financesController.create);

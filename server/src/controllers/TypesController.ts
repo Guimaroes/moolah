@@ -50,4 +50,55 @@ export default class TypesController {
             })
         }
     }
+
+    async delete(request: Request, response: Response) {
+        const filters = request.query;
+
+        const id = filters.id as string;
+    
+        const trx = await db.transaction();
+    
+        try {
+            await trx('types').delete().where('types.id', '=', id);
+            
+            await trx.commit();
+        
+            return response.status(201).send();
+        } catch (err) {
+            await trx.rollback();
+            
+            return response.status(400).json({
+                error: 'Unexpected error while deleting type'
+            })
+        }
+    }
+
+    async update(request: Request, response: Response) {
+        const {
+            id,
+            title,
+            is_income,
+            id_user
+        } = request.body;
+    
+        const trx = await db.transaction();
+    
+        try {
+            await trx('types').update({
+                title,
+                is_income,
+                id_user
+            }).where('types.id', '=', id);
+            
+            await trx.commit();
+        
+            return response.status(201).send();
+        } catch (err) {
+            await trx.rollback();
+            
+            return response.status(400).json({
+                error: 'Unexpected error while updating type'
+            })
+        }
+    }
 }
